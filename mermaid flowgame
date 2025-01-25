@@ -1,0 +1,14 @@
+```mermaid
+flowchart TD
+    A[Start] --> B[Player makes a guess]
+    B --> C{Is guess correct?}
+    C -- Yes --> D[Feedback: Correct!]
+    C -- No --> E{Is guess too high?}
+    E -- Yes --> F[Feedback: Guess lower]
+    E -- No --> G[Feedback: Guess higher]
+    F --> B
+    G --> B
+    D --> H[System ends the game]
+    H --> I[Game status: Ended]
+    D --> J[System records time]
+    J --> K[Game status: Running]
